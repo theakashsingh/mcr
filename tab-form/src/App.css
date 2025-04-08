@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.component-container{
+  width: 100%;
+}
+
+.tab-name{
+  border: 1px solid whitesmoke;
+  padding: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.current-tab{
+  width: 600px;
+  height: 300px;
+  border: 1px solid whitesmoke;
+  padding: 8px;
+}
