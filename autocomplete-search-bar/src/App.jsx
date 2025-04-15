@@ -7,7 +7,9 @@ function App() {
 
   const getSearchResult = async () => {
     try {
-      const response = await fetch(`https://dummyjson.com/products/search?q=${searchValue}`);
+      const response = await fetch(
+        `https://dummyjson.com/products/search?q=${searchValue}`
+      );
       const json = await response.json();
       setSearchResult(json.products);
     } catch (err) {
@@ -16,9 +18,8 @@ function App() {
   };
 
   useEffect(() => {
-    getSearchResult()
-  }, [searchValue])
-  
+    getSearchResult();
+  }, [searchValue]);
 
   return (
     <div>
@@ -29,11 +30,13 @@ function App() {
           className="search-input"
           onChange={e => setSearchValue(e.target.value)}
         />
-        <div className="search-result">
-          {searchResult.map(result => (
-            <span key={result.id}>{result.title}</span>
-          ))}
-        </div>
+        {searchResult.length > 0 && (
+          <div className="search-result">
+            {searchResult.map(result => (
+              <span key={result.id}>{result.title}</span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
