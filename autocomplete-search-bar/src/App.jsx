@@ -4,21 +4,30 @@ import "./App.css";
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [searchResult, setSearchResult] = useState([]);
+  const [cache, setCache] = useState({})
 
   const getSearchResult = async () => {
+    if (cache[searchValue]) {
+      setSearchResult(cache[searchValue])
+      return
+    }
     try {
       const response = await fetch(
         `https://dummyjson.com/products/search?q=${searchValue}`
       );
       const json = await response.json();
       setSearchResult(json.products);
+      setCache(prev=>({...prev,[searchValue]:json.products}))
     } catch (err) {
       console.log(err);
     }
   };
 
   useEffect(() => {
-    getSearchResult();
+    const timer = setTimeout(getSearchResult, 500);
+    return ()=>{
+       clearTimeout(timer)
+    }
   }, [searchValue]);
 
   return (
