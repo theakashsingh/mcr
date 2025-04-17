@@ -1,54 +1,54 @@
 {
     "id": "1",
     "name": "root",
-    "type": "folder",
+    "isFolder":true,
     "children": [
       {
         "id": "2",
         "name": "src",
-        "type": "folder",
+        "isFolder":true,
         "children": [
           {
             "id": "3",
             "name": "components",
-            "type": "folder",
+            "isFolder":true,
             "children": [
               {
                 "id": "4",
                 "name": "Header.jsx",
-                "type": "file"
+                "isFolder":false
               },
               {
                 "id": "5",
                 "name": "Footer.jsx",
-                "type": "file"
+                "isFolder":false
               },
               {
                 "id": "6",
                 "name": "Sidebar.jsx",
-                "type": "file"
+                "isFolder":false
               }
             ]
           },
           {
             "id": "7",
             "name": "pages",
-            "type": "folder",
+            "isFolder":true,
             "children": [
               {
                 "id": "8",
                 "name": "Home.jsx",
-                "type": "file"
+                "isFolder":false
               },
               {
                 "id": "9",
                 "name": "About.jsx",
-                "type": "file"
+                "isFolder":false
               },
               {
                 "id": "10",
                 "name": "Contact.jsx",
-                "type": "file"
+                "isFolder":false
               }
             ]
           },
@@ -60,22 +60,22 @@
           {
             "id": "12",
             "name": "index.js",
-            "type": "file"
+            "isFolder":false
           },
           {
             "id": "13",
             "name": "styles",
-            "type": "folder",
+            "isFolder":false,
             "children": [
               {
                 "id": "14",
                 "name": "global.css",
-                "type": "file"
+                "isFolder":false
               },
               {
                 "id": "15",
                 "name": "theme.css",
-                "type": "file"
+                "isFolder":false
               }
             ]
           }
@@ -84,29 +84,29 @@
       {
         "id": "16",
         "name": "public",
-        "type": "folder",
+        "isFolder":true,
         "children": [
           {
             "id": "17",
             "name": "index.html",
-            "type": "file"
+            "isFolder":false
           },
           {
             "id": "18",
             "name": "favicon.ico",
-            "type": "file"
+            "isFolder":false
           }
         ]
       },
       {
         "id": "19",
         "name": "package.json",
-        "type": "file"
+        "isFolder":false
       },
       {
         "id": "20",
         "name": "README.md",
-        "type": "file"
+        "isFolder":false
       }
     ]
   }
