@@ -12,7 +12,7 @@ const FileExplorer = ({ file, handleCreateFile,  handleDeleteNode}) => {
 
   const CREATE_FILE_ICON="https://cdn-icons-png.flaticon.com/512/6853/6853377.png"
 
-  const DELETE_ICON =""
+  const DELETE_ICON ="https://cdn-icons-png.flaticon.com/512/3405/3405244.png"
 
     const handleInput =(e,id,type)=>{
        handleCreateFile(e,id,type)
